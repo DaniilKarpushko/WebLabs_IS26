@@ -3,24 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Main page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<style>
-    h1 {
-        text-align: center;
-
-        font-size: smaller;
-    }
-
-    p {
-        font-size: 90%;
-        font-family: "Times New Roman", sans-serif;
-    }
-
-</style>
 <body>
 <header>
-    <pre style="text-align: center; font-weight: bold">
-
+    <pre>
      __    __     __  __        ______     __         ______     ______     __  __        ______     __         ______     ______
     /\ "-./  \   /\ \_\ \      /\  == \   /\ \       /\  __ \   /\  ___\   /\ \/ /       /\  == \   /\ \       /\  __ \   /\  ___\
     \ \ \-./\ \  \ \____ \     \ \  __<   \ \ \____  \ \  __ \  \ \ \____  \ \  _"-.     \ \  __<   \ \ \____  \ \ \_\ \  \ \ \__ \
@@ -30,10 +17,10 @@
     </pre>
 </header>
 <main>
-    <article style="display: inline-flex; margin-bottom: 5%">
+    <article class="article-container">
         <img src="https://www.cplus3g.com/wp-content/uploads/2015/09/funniest.png"
-             style="width: 30%; height: 40%; border-radius: 30px;" alt="my photo">
-        <div style="margin-left: 2%; padding-left: 2%; border-left: black 1px solid">
+             class="article__main-photo" alt="my photo">
+        <div class="article__information-container">
             <h2> About Me </h2>
             <p>
                 Sup Friends, my name is <strong>Abueweweabubueawewe Osas</strong>.
@@ -50,56 +37,53 @@
             </p>
         </div>
     </article>
-    <nav style="margin-right: 30%; margin-left: 30%">
-        <a href="" style="padding: 2%;
-        border: solid black 1px;
-        margin: 2%;">Weed & Dope</a>
-        <a href="" style="padding: 2%;
-        border: solid black 1px;
-        margin: 2%;">All Stories</a>
-        <a href="" style="padding: 2%;
-        border: solid black 1px;
-        margin: 2%;">My Blocks</a>
-        <a href="" style="padding: 2%;
-        border: solid black 1px;
-        margin: 2%;"> Rap lyrics</a>
-    </nav>
-    <h2>News</h2>
-    <div style="display: inline-flex;">
-        <section
-                style="border: black 1px solid; margin-left: 3%; margin-right: 3%; padding: 2% 5%; min-width: 15%;">
-            <img src="https://steamuserimages-a.akamaihd.net/ugc/785251538043479466/0C38B9268A544BB7DDC029493C81067C659379CC/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true"
-                 style="width: 100%; height: 50%" alt="">
-            <div>
-                <h4>Me and Snoop</h4>
-                <p>I <q>Smoke weed everyday</q><br>
-                    with uncle Snoop on his mansion...</p>
-                <button>show more</button>
+    <div class="main__menu-container">
+        <nav style="margin-right: 30%; margin-left: 30%">
+            <a href="" class="main__menu-ref">Weed & Dope</a>
+            <a href="" class="main__menu-ref">News</a>
+            <a href="" class="main__menu-ref">My Blocks</a>
+            <a href="" class="main__menu-ref"> Rap lyrics</a>
+        </nav>
+        <div>
+            <h2>News</h2>
+            <div style="display: inline-flex;">
+                <section
+                        class="news-container">
+                    <img src="https://steamuserimages-a.akamaihd.net/ugc/785251538043479466/0C38B9268A544BB7DDC029493C81067C659379CC/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true"
+                         style="width: 100%; height: 50%" alt="">
+                    <div>
+                        <h4>Me and Snoop</h4>
+                        <p>I <q>Smoke weed everyday</q><br>
+                            with uncle Snoop on his mansion...</p>
+                        <button>show more</button>
+                    </div>
+                </section>
+                <section
+                        class="news-container">
+                    <img src="https://cdnb.artstation.com/p/assets/images/images/039/858/651/large/michal-lisowski-musicc3400k.jpg?1627148404"
+                         style="width: 100%; height: 50%" alt="">
+                    <h4>Banging on code</h4>
+                    <p>
+                        <code>
+                            std::cout << "Hello, World!";<br>
+                            return 0;
+                        </code>
+                    </p>
+                    <button>show more</button>
+                </section>
+                <section
+                        class="news-container">
+                    <img src="https://media.cnn.com/api/v1/images/stellar/prod/240723095054-eminem-the-death-of-slim-shady-cover.jpg?c=16x9&q=w_800,c_fill"
+                         style="width: 100%; height: 50%" alt="">
+                    <h4>Em dropped smth new!</h4>
+                    <p>Lets listen and check new<br>
+                        Eminem's album...</p>
+                    <button>show more</button>
+                </section>
             </div>
-        </section>
-        <section
-                style="border: black 1px solid; margin-left: 3%; margin-right: 3%; padding: 2% 5%; min-width: 15%;">
-            <img src="https://cdnb.artstation.com/p/assets/images/images/039/858/651/large/michal-lisowski-musicc3400k.jpg?1627148404"
-                 style="width: 100%; height: 50%" alt="">
-            <h4>Banging on code</h4>
-            <p>
-                <code>
-                    std::cout << "Hello, World!";<br>
-                    return 0;
-                </code>
-            </p>
-            <button>show more</button>
-        </section>
-        <section
-                style="border: black 1px solid; margin-left: 3%; margin-right: 3%; padding: 2% 5%;  min-width: 15%;">
-            <img src="https://media.cnn.com/api/v1/images/stellar/prod/240723095054-eminem-the-death-of-slim-shady-cover.jpg?c=16x9&q=w_800,c_fill"
-                 style="width: 100%; height: 50%" alt="">
-            <h4>Em dropped smth new!</h4>
-            <p>Lets listen and check new<br>
-                Eminem's album...</p>
-            <button>show more</button>
-        </section>
+        </div>
     </div>
+
 </main>
 <footer>
     <aside style="float: right">
@@ -110,14 +94,14 @@
             <i>GhostFaceKillah</i>
         </p>
     </aside>
-    <div style="float: left">
+    <aside style="float: left">
         <h4>Social media</h4>
         <ul>
-            <li><a href="">visit YouTube</a></li>
-            <li><a href="">visit Instagram</a></li>
-            <li><a href="">visit MineCraft server</a></li>
+            <li><a href="" class="footer-link">visit YouTube</a></li>
+            <li><a href="" class="footer-link">visit Instagram</a></li>
+            <li><a href="" class="footer-link">visit MineCraft server</a></li>
         </ul>
-    </div>
+    </aside>
 </footer>
 
 </body>
