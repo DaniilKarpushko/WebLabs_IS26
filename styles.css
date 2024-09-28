@@ -94,7 +94,7 @@ footer {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 30%; /* Ширина каждого блока */
+    width: 30%;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
