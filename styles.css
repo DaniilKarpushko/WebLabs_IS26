@@ -1,13 +1,12 @@
 header {
     background: #92969D;
-    left: 0;
-    right: 0;
-    top: 0;
-    text-align: center;
+    flex-wrap: wrap;
     border-bottom: black 1px solid;
-    position: absolute;
-    display: inline;
-    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1% 0;
 }
 
 body {
@@ -16,44 +15,53 @@ body {
 
 main {
     margin-bottom: 1%;
-    margin-top: 15%;
+    margin-top: 2%;
 }
 
 footer {
     justify-content: center;
 }
+
 .header__emblem {
     width: 8%;
+    height: 8%;
     float: left;
 }
 
 .header__text {
     color: white;
-    font-size: large;
+    font-size: 100%;
     font-weight: bolder;
     text-shadow: 10px 10px 10px #000;
+    text-overflow: ellipsis;
     float: right;
     margin-right: 1%;
 }
 
 .article-container {
-    display: inline-flex;
-    margin-bottom: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    align-items: flex-start;
     background: #9CABAE;
     padding: 2% 2%;
     border: black 1px solid;
+    margin-bottom: 20px;
+    justify-content: center;
 }
 
 .article__information-container {
     background-color: white;
     box-shadow: 10px 10px 10px #000;
-    margin-left: -10%;
-    padding-left: 2%;
+    padding: 2%;
+    flex: 1 1 300px;
+    max-width: 100%;
+    margin: 0;
 }
 
 .article__main-photo {
     width: 30%;
-    height: 40%;
+    height: 60%;
     border-radius: 15%;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -66,138 +74,169 @@ footer {
 }
 
 .main__menu-nav {
-    margin-right: 30%;
-    margin-left: 30%;
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin: 0 auto 3%;
+}
+nav ul {
+    padding: 1% 5%;
 }
 
-.main__all-news-container{
+nav li{
+    display: inline;
+}
+
+.main__all-news-container {
     display: flex;
-    justify-content: space-between;
-    gap: 100px;
+    flex-wrap: wrap;
+    gap: 3%;
+    justify-content: space-around;
 }
 
-.nav-container {
-    background-color: white;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    margin-top: -2.1%;
-    border-left: #0f221e 20px solid;
-    border-right: #0f221e 20px solid;
-    border-bottom: #1f5545 20px solid;;
-    position: sticky;
-    left: 0;
-    right: 0px;
-}
 .news-container {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 30%;
-    padding: 20px;
+    width: 20%;
+    height: 15%;
+    padding: 2%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 1%;
 }
 
 .main__menu-button {
-    padding: 2%;
-    border: solid black 1px;
-    margin: 2%;
-    text-decoration: none;
+    padding: 1em;
+    background: rgb(144, 208, 221);
+    border: 3px solid black;
+    color: #000000;
 }
 
 .main__menu-button:hover {
-    padding: 2%;
-    border: solid black 1px;
     box-shadow: 10px 5px 5px #112922;
-    text-decoration: none;
-    margin: 2%;
     background: #05dc9d;
-}
-
-footer {
-    color: white;
-}
-
-.footer-link {
-    text-decoration: none;
 }
 
 .footer-link:hover {
     text-decoration: underline;
 }
 
-.footer-link:visited {
-    text-decoration: none;
-    color: white;
-}
-
-aside {
-    background-color: black;
-    padding: 2%;
-    border-radius: 15%;
-    width: 15%;
-}
-
-.news-container__button-container{
-    display: inline-flex;
-    justify-content: center;
-    gap: 33%;
-
-}
-.news-container__button {
-    border: none;
-    display: inline-block;
-    padding: 7.5% 1.25%;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 10px;
-    transition: all .3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    margin-bottom: 1%;
-}
-
-.news-container__button:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #165a41;
-    z-index: -2;
-}
-
-.news-container__button:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: #0C2C33;
-    transition: all .3s;
-    z-index: -1;
-}
-
-.news-container__button:hover {
-    color: #fff;
-}
-
-.news-container__button:hover:before {
-    width: 100%;
-}
-
 .footer__heart-container {
     margin-right: 45%;
     margin-left: 45%;
     color: rgba(255,50,82,0.79);
+}
 
+.table-container {
+    display: grid;
+    gap: 1%;
+    margin: 2% auto;
+    max-width: 100%;
+    width: 90%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.table-row {
+    border-right: black 1px solid;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5%;
+    background-color: #f5f5f5;
+}
+
+.table-row:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+.table-row:nth-child(odd) {
+    background-color: #d1e7dd;
+}
+
+.header {
+    font-weight: bold;
+    background-color: #cccccc;
+    border: black 3px solid;
+}
+
+@media (max-width: 1165px){
+    .header__text {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 1050px){
+    .header__text {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 937px){
+    .header__text {
+        font-size: 70%;
+    }
+}
+
+@media (max-width: 825px){
+    .header__text {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 712px){
+    .header__text {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 600px){
+    .table-row {
+        grid-template-columns: 1fr; /* На маленьких экранах строки будут занимать всю ширину */
+        text-align: center;
+    }
+
+    .article__main-photo {
+        display: none
+    }
+
+    .article__information-container {
+        max-width: 100%; /* коробка с текстом занимает всю ширину */
+    }
+
+    .main__all-news-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-container {
+        width: 60%;
+    }
+
+    .header__text {
+        font-size: 0.5%;
+    }
+
+    .footer__heart-container,
+    aside {
+        display: none;
+    }
+}
+
+@media (max-width: 554px){
+
+    header {
+        justify-content: center;
+    }
+
+    .header__text {
+        display: none;
+    }
+
+    .footer__heart-container,
+    aside {
+        display: none;
+    }
 }

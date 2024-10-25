@@ -14,9 +14,9 @@
     \ \ \-./\ \  \ \____ \     \ \  __<   \ \ \____  \ \  __ \  \ \ \____  \ \  _"-.     \ \  __<   \ \ \____  \ \ \_\ \  \ \ \__ \
      \ \_\ \ \_\  \/\_____\     \ \_____\  \ \_____\  \ \_\ \_\  \ \_____\  \ \_\ \_\     \ \_____\  \ \_____\  \ \_____\  \ \_____\
       \/_/  \/_/   \/_____/      \/_____/   \/_____/   \/_/\/_/   \/_____/   \/_/\/_/      \/_____/   \/_____/   \/_____/   \/_____/
-
     </pre>
 </header>
+
 <main>
     <article class="article-container">
         <img src="https://www.cplus3g.com/wp-content/uploads/2015/09/funniest.png"
@@ -37,19 +37,18 @@
         </div>
     </article>
     <div class="main__menu-container">
-        <div class="nav-container">
             <nav class="main__menu-nav">
-                <button class="main__menu-button">Zaza</button>
-                <button class="main__menu-button">News</button>
-                <button class="main__menu-button">My Blocks</button>
-                <button class="main__menu-button"> Rap lyrics</button>
+                <ul>
+                    <li><button class="main__menu-button">Zaza</button></li>
+                    <li><button class="main__menu-button">News</button></li>
+                    <li><button class="main__menu-button">My Blocks</button></li>
+                    <li><button class="main__menu-button"> Rap lyrics</button></li>
+                </ul>
             </nav>
-        </div>
         <div style="border-top: black 1px solid">
             <h2>News</h2>
-            <div style="display: inline-flex;">
-                <section
-                        class="news-container">
+            <div class="main__all-news-container">
+                <section class="news-container">
                     <img src="https://steamuserimages-a.akamaihd.net/ugc/785251538043479466/0C38B9268A544BB7DDC029493C81067C659379CC/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true"
                          style="width: 100%; height: 50%" alt="">
                     <h4>Me and Snoop</h4>
@@ -62,8 +61,7 @@
                     </div>
                     <p>likes: 0</p>
                 </section>
-                <section
-                        class="news-container">
+                <section class="news-container">
                     <img src="https://cdnb.artstation.com/p/assets/images/images/039/858/651/large/michal-lisowski-musicc3400k.jpg?1627148404"
                          style="width: 100%; height: 50%" alt="">
                     <h4>Banging on code</h4>
@@ -79,8 +77,7 @@
                     </div>
                     <p>likes: 0</p>
                 </section>
-                <section
-                        class="news-container">
+                <section class="news-container">
                     <img src="https://media.cnn.com/api/v1/images/stellar/prod/240723095054-eminem-the-death-of-slim-shady-cover.jpg?c=16x9&q=w_800,c_fill"
                          style="width: 100%; height: 50%" alt="">
                     <h4>Em dropped smth new!</h4>
@@ -95,7 +92,28 @@
             </div>
         </div>
     </div>
-
+    <div class="table-container">
+        <div class="table-row header">
+            <div>Top 3 Генгста на районе</div>
+            <div>Top 3 Шоколадки</div>
+            <div>Top 3 Баскетболиста</div>
+        </div>
+        <div class="table-row">
+            <div>Майк Шортики</div>
+            <div>Milky way</div>
+            <div>Коби Брайант</div>
+        </div>
+        <div class="table-row">
+            <div>Лок дог</div>
+            <div>Twix</div>
+            <div>Майкл Джордан</div>
+        </div>
+        <div class="table-row">
+            <div>Шалун</div>
+            <div>Аленка</div>
+            <div>Стефан Карри</div>
+        </div>
+    </div>
 </main>
 <footer>
     <aside style="float: right">
@@ -117,7 +135,7 @@
     <div class="footer__heart-container">
         <pre>
    ▄▄▄▄▄▄     ▄▄▄▄▄▄
- ▄█▓▓▓▓▓▓█▄─▄█▓▓▓▓▓▓█▄
+ ▄█▓▓▓▓▓▓█▄ ▄█▓▓▓▓▓▓█▄
  █▓▓▒▒▒▒▒▓▓█▓▓▒▒▒▒▒▓▓█▌
 █▓▓▒▒░╔╗╔═╦═╦═╦═╗░▒▒▓▓█
 █▓▓▒▒░║╠╣╬╠╗║╔╣╩╣░▒▒▓▓█
@@ -130,6 +148,5 @@
         </pre>
     </div>
 </footer>
-
 </body>
 </html>
