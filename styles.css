@@ -1,15 +1,15 @@
 header {
     background: #92969D;
     flex-wrap: wrap;
-    position: fixed;
+    position: sticky;
     border-bottom: black 1px solid;
     align-items: center;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     padding: 1% 0;
-    margin-left: -0.3%;
-    margin-top: -10%;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 
 main {
     margin-bottom: 1%;
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 footer {
@@ -242,4 +242,12 @@ nav li{
     aside {
         display: none;
     }
+}
+
+@media (max-width: 409px){
+
+   .main__menu-button {
+       font-size: 50%;
+   }
+
 }
