@@ -1,12 +1,15 @@
 header {
     background: #92969D;
     flex-wrap: wrap;
+    position: fixed;
     border-bottom: black 1px solid;
     align-items: center;
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 1% 0;
+    margin-left: -0.3%;
+    margin-top: -10%;
 }
 
 body {
@@ -15,7 +18,7 @@ body {
 
 main {
     margin-bottom: 1%;
-    margin-top: 2%;
+    margin-top: 10%;
 }
 
 footer {
@@ -46,7 +49,7 @@ footer {
     background: #9CABAE;
     padding: 2% 2%;
     border: black 1px solid;
-    margin-bottom: 20px;
+    margin-bottom: 2.5%;
     justify-content: center;
 }
 
