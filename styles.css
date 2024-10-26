@@ -197,7 +197,7 @@ nav li{
 
 @media (max-width: 600px){
     .table-row {
-        grid-template-columns: 1fr; /* На маленьких экранах строки будут занимать всю ширину */
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
@@ -206,7 +206,7 @@ nav li{
     }
 
     .article__information-container {
-        max-width: 100%; /* коробка с текстом занимает всю ширину */
+        max-width: 100%;
     }
 
     .main__all-news-container {
