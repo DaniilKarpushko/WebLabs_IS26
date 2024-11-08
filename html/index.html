@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Main page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../scripts/javaScripts.js"></script>
 </head>
 <body>
 <header>
@@ -37,58 +38,80 @@
         </div>
     </article>
     <div class="main__menu-container">
-            <nav class="main__menu-nav">
-                <ul>
-                    <li><button class="main__menu-button">Zaza</button></li>
-                    <li><button class="main__menu-button">News</button></li>
-                    <li><button class="main__menu-button">My Blocks</button></li>
-                    <li><button class="main__menu-button"> Rap lyrics</button></li>
-                </ul>
-            </nav>
-        <div style="border-top: black 1px solid">
-            <h2>News</h2>
-            <div class="main__all-news-container">
-                <section class="news-container">
-                    <img src="https://steamuserimages-a.akamaihd.net/ugc/785251538043479466/0C38B9268A544BB7DDC029493C81067C659379CC/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true"
-                         style="width: 100%; height: 50%" alt="">
-                    <h4>Me and Snoop</h4>
-                    <p>I <q>Smoke weed everyday</q><br>
-                        with uncle Snoop on his mansion...
-                    </p>
-                    <div class="news-container__button-container">
-                        <button class="news-container__button">show more</button>
-                        <button class="news-container__button">put&#10084; like</button>
-                    </div>
-                    <p>likes: 0</p>
-                </section>
-                <section class="news-container">
-                    <img src="https://cdnb.artstation.com/p/assets/images/images/039/858/651/large/michal-lisowski-musicc3400k.jpg?1627148404"
-                         style="width: 100%; height: 50%" alt="">
-                    <h4>Banging on code</h4>
-                    <p>
-                        <code>
-                            std::cout << "Hello, World!";<br>
-                            return 0;
-                        </code>
-                    </p>
-                    <div class="news-container__button-container">
-                        <button class="news-container__button">show more</button>
-                        <button class="news-container__button">put&#10084; like</button>
-                    </div>
-                    <p>likes: 0</p>
-                </section>
-                <section class="news-container">
-                    <img src="https://media.cnn.com/api/v1/images/stellar/prod/240723095054-eminem-the-death-of-slim-shady-cover.jpg?c=16x9&q=w_800,c_fill"
-                         style="width: 100%; height: 50%" alt="">
-                    <h4>Em dropped smth new!</h4>
-                    <p>Lets listen and check new<br>
-                        Eminem's album...</p>
-                    <div class="news-container__button-container">
-                        <button class="news-container__button">show more</button>
-                        <button class="news-container__button">put&#10084; like</button>
-                    </div>
-                    <p>likes: 0</p>
-                </section>
+        <nav class="main__menu-nav">
+            <ul>
+                <li>
+                    <button class="main__menu-button" id="menu-zaza-btn" onclick="toggleContainer('zaza')">Zaza</button>
+                </li>
+                <li>
+                    <button class="main__menu-button" id="menu-news-btn" onclick="toggleContainer('news')">News</button>
+                </li>
+                <li>
+                    <button class="main__menu-button" id="menu-my_blocks-btn" onclick="toggleUriContainer('blocks','blockMap.html')" >My Blocks</button>
+                </li>
+                <li>
+                    <button class="main__menu-button" id="menu-rap_lyrics-btn" onclick="toggleUriContainer('lyrics','lyrics.html')"> Rap lyrics</button>
+                </li>
+            </ul>
+        </nav>
+        <div id="menu-frames">
+            <div class="container" id="news">
+                <h2>News</h2>
+                <div class="main__all-news-container">
+                    <section class="news-container">
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/785251538043479466/0C38B9268A544BB7DDC029493C81067C659379CC/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true"
+                             style="width: 100%; height: 50%" alt="">
+                        <h4>Me and Snoop</h4>
+                        <p>I <q>Smoke weed everyday</q><br>
+                            with uncle Snoop on his mansion...
+                        </p>
+                        <div class="news-container__button-container">
+                            <button class="news-container__button">show more</button>
+                            <button class="news-container__button">put&#10084; like</button>
+                        </div>
+                        <p>likes: 0</p>
+                    </section>
+                    <section class="news-container">
+                        <img src="https://cdnb.artstation.com/p/assets/images/images/039/858/651/large/michal-lisowski-musicc3400k.jpg?1627148404"
+                             style="width: 100%; height: 50%" alt="">
+                        <h4>Banging on code</h4>
+                        <p>
+                            <code>
+                                std::cout << "Hello, World!";<br>
+                                return 0;
+                            </code>
+                        </p>
+                        <div class="news-container__button-container">
+                            <button class="news-container__button">show more</button>
+                            <button class="news-container__button">put&#10084; like</button>
+                        </div>
+                        <p>likes: 0</p>
+                    </section>
+                    <section class="news-container">
+                        <img src="https://media.cnn.com/api/v1/images/stellar/prod/240723095054-eminem-the-death-of-slim-shady-cover.jpg?c=16x9&q=w_800,c_fill"
+                             style="width: 100%; height: 50%" alt="">
+                        <h4>Em dropped smth new!</h4>
+                        <p>Lets listen and check new<br>
+                            Eminem's album...</p>
+                        <div class="news-container__button-container">
+                            <button class="news-container__button">show more</button>
+                            <button class="news-container__button">put&#10084; like</button>
+                        </div>
+                        <p>likes: 0</p>
+                    </section>
+                </div>
+            </div>
+            <div class="container" id="zaza">
+                <h2>ZAZA SHOP</h2>
+                <iframe src="zazaPage.html" class="iframe__zaza"></iframe>
+            </div>
+            <div class="container" id="blocks">
+                <h2>Blocks</h2>
+                <p>Открыто в новой вкладке, бро...</p>
+            </div>
+            <div class="container" id="lyrics">
+                <h2>Rap Lyrics</h2>
+                <p>Зря ты сюда зашел...</p>
             </div>
         </div>
     </div>
