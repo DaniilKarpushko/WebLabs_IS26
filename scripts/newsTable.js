@@ -24,12 +24,25 @@ document.addEventListener('DOMContentLoaded', () => {
     function addNewsToGrid(title, description, imageUrl) {
         const newsElement = document.createElement('div');
         newsElement.className = 'news-container';
-        newsElement.innerHTML = `
-            <img src="${imageUrl}" alt="${title}">
-            <h4>${title}</h4>
-            <p>${description}</p>
-            <button class="news-container__button delete-button">Удалить</button>
-        `;
+
+        let image = document.createElement('img');
+        image.src = imageUrl;
+
+        let header = document.createElement('h4');
+        header.title = title;
+
+        let desc = document.createElement('p');
+        desc.textContent = description;
+
+        let button = document.createElement('button');
+        button.classList.add('news-container__button', 'delete-button');
+        button.textContent = 'Удалить';
+
+        newsElement.appendChild(image);
+        newsElement.appendChild(header);
+        newsElement.appendChild(desc);
+        newsElement.appendChild(button);
+
 
         newsElement.querySelector('.delete-button').addEventListener('click', () => {
             deleteNewsFromLocalStorage(title);
