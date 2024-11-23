@@ -17,9 +17,3 @@ function toggleContainer(containerId) {
 
     document.getElementById(containerId).style.display = 'block';
 }
-
-function toggleUriContainer(containerId, ref) {
-    toggleContainer(containerId)
-
-    location.href=ref;
-}

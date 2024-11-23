@@ -102,7 +102,7 @@ nav li {
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 20%;
-    height: 15%;
+    height: 30%;
     padding: 2%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -179,13 +179,12 @@ nav li {
     display: flex;
 }
 
-.iframe__zaza
+.iframe__custom
 {
     overflow: auto;
     border: none;
     width: 100%;
-}
-.menu-frame {
+    height: min(400px);
 }
 .body__zaza {
     background-image: url("https://i.pinimg.com/originals/23/7f/e6/237fe68b74c196a88e12b4f39b562c76.jpg");

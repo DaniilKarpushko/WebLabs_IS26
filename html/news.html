@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор новостей</title>
+    <link rel="stylesheet" href="../styles/news.css">
+</head>
+<body>
+<h1>Конструктор новостей</h1>
+
+<form id="newsForm">
+    <label>
+        Заголовок:
+        <input type="text" id="newsTitle" required>
+    </label>
+    <label>
+        Описание:
+        <textarea id="newsDescription" rows="3" required></textarea>
+    </label>
+    <label>
+        Ссылка на изображение:
+        <input type="url" id="newsImage" required>
+    </label>
+    <button type="submit">Добавить новость</button>
+    <button type="button" id="loadNews">Загрузить сохранённые</button>
+</form>
+
+<div id="newsContainer" class="news-grid"></div>
+
+<script src="../scripts/newsTable.js"></script>
+</body>
+</html>
