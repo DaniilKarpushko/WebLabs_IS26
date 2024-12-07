@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const desc = document.createElement('p');
         desc.textContent = description;
 
-        // Контейнер для кнопок
         const buttonContainer = document.createElement('div');
         buttonContainer.className = 'buttons';
 
@@ -62,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadComments(newsElement, newsTitle) {
         const commentSection = newsElement.querySelector('.comment-section');
         if (commentSection) {
-            commentSection.remove(); // Удаляем комментарии, если они уже отображены
+            commentSection.remove();
             return;
         }
 
@@ -75,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
         newsElement.appendChild(newCommentSection);
 
         try {
-            // Псевдо-случайная фильтрация
             const filter = Math.random() > 0.5 ? '?id_gte=100' : '?id_lte=200';
             const response = await fetch(`https://jsonplaceholder.typicode.com/comments${filter}`);
 
@@ -85,10 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const comments = await response.json();
 
-            // Удаляем прелоадер
             preloader.remove();
 
-            // Добавляем комментарии
             const commentList = document.createElement('ul');
             commentList.className = 'comment-list';
 
@@ -108,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             newCommentSection.appendChild(commentList);
         } catch (error) {
-            // Удаляем прелоадер и показываем сообщение об ошибке
             preloader.remove();
             const errorMessage = document.createElement('p');
             errorMessage.textContent = `⚠ Не удалось загрузить комментарии: ${error.message}`;
