@@ -63,28 +63,75 @@ button:hover {
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 80%;
-    height: 80%;
     padding: 2%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1%;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
 .news-container img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .news-container h4 {
     margin: 10px 0;
     font-size: 1.2em;
+    text-align: center;
 }
 
 .news-container p {
     font-size: 0.9em;
     color: #555;
     padding: 10px;
+    text-align: center;
+}
+
+.news-container .buttons {
+    display: flex;
+    justify-content: space-between;
+    max-height: 50%;
+    width: 100%;
+}
+
+.news-container button {
+    flex: 1;
+    max-height: 100%;
+    margin: 0 5px;
+}
+
+.preloader {
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    padding: 10px;
+}
+
+.comment-section {
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.comment-section .comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comment-section .comment-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
 }
